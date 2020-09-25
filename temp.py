@@ -1,3 +1,55 @@
+''' EM C
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int produtoDescartado = 0;
+    int produtoDentroDoEsperado = 0;
+    double pesoTotalRejeitado = 0.0;
+    int opcao = 0;
+
+    printf("Linha de Producao");
+    
+    while(opcao != 2) {
+        double pesoDoProduto = 0.0;
+
+        printf("\nPeso do produto em gramas: ");
+        scanf("%f", &pesoDoProduto);
+        
+        if(pesoDoProduto > 250) {
+            produtoDescartado += 1;
+             pesoTotalRejeitado += pesoDoProduto;
+        } else {
+            produtoDentroDoEsperado += 1;
+        }
+
+        printf("\nDigite\n1 para continuar\n2 para mostrar os resultados\n: ");
+        scanf("%d", &opcao);
+        
+        if(opcao==2){
+            break;
+        } else {
+            continue;
+        }
+    }
+    printf("\nProdutos dentro do esperado: %f", produtoDentroDoEsperado);
+    printf("\nProdutos descartado: %f", produtoDescartado);
+    printf("\nPeso total descartado: %f", pesoTotalRejeitado);
+
+    return 0;
+}
+'''
+
+
+
 print("Linha de Produção")
 
 produtoDescartado = 0 #tipo int
