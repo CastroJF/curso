@@ -1,12 +1,4 @@
 ''' EM C
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <stdio.h>
 
 int main()
@@ -19,12 +11,12 @@ int main()
     printf("Linha de Producao");
     
     while(opcao != 2) {
-        double pesoDoProduto = 0.0;
+        float pesoDoProduto = 0.0;
 
         printf("\nPeso do produto em gramas: ");
         scanf("%f", &pesoDoProduto);
         
-        if(pesoDoProduto > 250) {
+        if(pesoDoProduto > 250.0) {
             produtoDescartado += 1;
              pesoTotalRejeitado += pesoDoProduto;
         } else {
@@ -40,9 +32,9 @@ int main()
             continue;
         }
     }
-    printf("\nProdutos dentro do esperado: %f", produtoDentroDoEsperado);
-    printf("\nProdutos descartado: %f", produtoDescartado);
-    printf("\nPeso total descartado: %f", pesoTotalRejeitado);
+    printf("\nProdutos dentro do esperado: %d", produtoDentroDoEsperado);
+    printf("\nProdutos descartado: %d", produtoDescartado);
+    printf("\nPeso total descartado: %f gramas", pesoTotalRejeitado);
 
     return 0;
 }
